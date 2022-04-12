@@ -2,7 +2,6 @@
 
 import gym
 import numpy as np
-import pandas
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
