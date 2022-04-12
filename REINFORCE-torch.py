@@ -8,9 +8,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import wandb
 
+
 # Hyperparams
 EPISODES = 10_000
-MOV_AVG = 1_000
 GAMMA = 0.99
 ALPHA = 0.01
 RENDER = True
@@ -21,7 +21,7 @@ WANDB = True
 env = gym.make("CartPole-v1")
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print(device)
+print(f"device: {device}")
 
 if WANDB:
     wandb.init(project="REINFORCE-CartPoleV1")
